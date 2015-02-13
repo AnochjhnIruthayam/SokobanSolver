@@ -10,8 +10,9 @@ namespace SokobanSolver
     {
         static void Main(string[] args)
         {
+            //The Map should be in the Debug or Release folder. If solution exist the path will be saved there as well
             Agent Smith = new Agent();
-            Smith.runGame("C:\\Users\\Anochjhn Iruthayam\\Documents\\Visual Studio 2012\\Projects\\SearchAlg\\SearchAlg\\");
+            Smith.runGame();
             System.Console.ReadKey();
         }
     }

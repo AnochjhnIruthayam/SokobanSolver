@@ -44,12 +44,12 @@ namespace SokobanSolver
             }
             return map;
         }
-        public void runGame(string GameMapPath)
+        public void runGame()
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             //long start = DateTime.Now.Second;
-            string[,] map = loadMap(GameMapPath + "map_for_competition - Copy.txt");
+            string[,] map = loadMap("map_for_competition.txt");
             string path = "";
             GameBoard board = new GameBoard(map, getwidth, getheight);
 
@@ -70,7 +70,7 @@ namespace SokobanSolver
                 path = board.recontructPath();
                 Console.WriteLine(path + "\nPath Length: " + path.Count() + "\nTotal time: " + stopwatch.Elapsed + "\nHeuristic: diamond to goal shortest path");
                 //System.IO.File.WriteAllText(GameMapPath + "path.txt", path);
-                System.IO.File.WriteAllText(GameMapPath + "pathThreeDiamondswithMposition2.txt", 
+                System.IO.File.WriteAllText("pathThreeDiamondswithMposition2.txt", 
                     "Path:" + path + 
                     "\nPath Length: " + path.Count() + 
                     "\nTotal time: " + stopwatch.ElapsedMilliseconds + 
