@@ -1,4 +1,4 @@
-# SokobanSolver
+# Sokoban Solver
 
 A Sokoban Solver which was created for the 7. Semester AI Course at SDU
 
